@@ -1,9 +1,10 @@
 /* === splash screen === */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif; /* Choose an appropriate fallback font */
+  font-family: 'Proxima Nova', sans-serif; /* Choose an appropriate fallback font */
 }
 
 section {
@@ -39,7 +40,7 @@ section {
 
 .link-box a {
   display: block;
-  width: 100%; /* Make the buttons extend to 100% of the width */
+  width: 95%; /* Make the buttons extend to 100% of the width */
   margin-bottom: 10px; /* Add some space between buttons */
   padding: 10px; /* Adjust padding if needed */
   text-decoration: none;
