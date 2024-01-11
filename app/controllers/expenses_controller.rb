@@ -3,7 +3,11 @@ class ExpensesController < ApplicationController
 
   # GET /expenses or /expenses.json
   def index
-    @expenses = Expense.all
+    category_id = params[:category_id]
+    order = params[:order] || 'desc' # Default to descending order if not provided
+
+    @category = Category.find(category_id)
+    @expenses = @category.expenses.order(created_at: order)
   end
 
   # GET /expenses/1 or /expenses/1.json
