@@ -1,0 +1,15 @@
+<div class="container">
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="login-header">
+    <a href="<%= root_path %>" class="back-arrow">←</a>
+    <p> RESET </p>
+    <span class="actions">
+      <%= f.submit "Reset" %>
+    </span>
+  </div>
+  <div class="field">
+    <%= f.email_field :email, placeholder:"email", autofocus: true, autocomplete: "email" %>
+  </div>
+<% end %>
+</div>

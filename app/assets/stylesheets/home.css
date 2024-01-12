@@ -1,0 +1,60 @@
+/* === splash screen === */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Proxima Nova', sans-serif; /* Choose an appropriate fallback font */
+}
+
+section {
+  width: 100%;
+  margin: auto;
+}
+
+.section-splash {
+  min-height: 100vh; /* Use min-height to ensure the section takes at least 100% of the viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-splash h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 64px;
+  color: #434b54;
+}
+
+.link-box {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center the buttons horizontally */
+  background-color: #fff; /* Set a background color */
+  padding: 10px; /* Add some padding for better visibility */
+  box-shadow: 0.1px 0.1px 10px rgba(0.1, 0.1, 0.1, 0.1); /* Add a subtle shadow for separation */
+}
+
+.link-box a {
+  display: block;
+  width: 95%; /* Make the buttons extend to 100% of the width */
+  margin-bottom: 10px; /* Add some space between buttons */
+  padding: 10px; /* Adjust padding if needed */
+  text-decoration: none;
+  color: #434b54;
+  background-color: transparent;
+  border: 1px solid #434b54;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  text-align: center;
+}
+
+.link-box a:hover {
+  background-color: #3778c2; /* Light blue color on hover */
+  color: white;
+}
+
+/* === end splash screen === */
