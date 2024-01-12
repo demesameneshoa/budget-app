@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.all
+    @categories = current_user.categories
     @total_categories_amount = @categories.sum { |category| category.expenses.sum(:amount) }
   end
 
