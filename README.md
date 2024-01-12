@@ -90,7 +90,7 @@ This project is deployed on Render. You can visit it [here](https://budget-app-p
 
 Video presentation of the project:
   
-  [Here](https://www.loom.com/share/2fdeb817c29a45f7aea1cf96413b8d6c?sid=f9437974-5b25-49ef-8c38-eb0498b248dc)
+  [Here](https://www.loom.com/share/eca6df292258416281c6d314b5442d6b?sid=a6483c69-6534-4156-a6d5-66bb615db626)
 
 <!-- AUTHORS -->
 
