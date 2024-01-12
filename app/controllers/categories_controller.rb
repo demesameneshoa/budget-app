@@ -5,6 +5,7 @@ class CategoriesController < ApplicationController
   # GET /categories or /categories.json
   def index
     @categories = Category.all
+    @total_categories_amount = @categories.sum { |category| category.expenses.sum(:amount) }
   end
 
   # GET /categories/1 or /categories/1.json
@@ -44,7 +45,13 @@ class CategoriesController < ApplicationController
 
   # DELETE /categories/1 or /categories/1.json
   def destroy
-    @category.destroy!
+    @category = Category.find(params[:id])
+    @category.category_expenses.destroy_all
+    @category.destroy
+    respond_to do |format|
+      format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   private

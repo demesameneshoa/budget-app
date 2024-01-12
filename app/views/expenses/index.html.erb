@@ -11,27 +11,28 @@
     </div>
   </div>
   <div class="container">
-    <div class="total-transactions">
-      <h4>Total: </h4>
-      <strong><%= @category.id %></strong>
-    </div>
-    <ul class="categories">
-      <% @expenses.each do |expense| %>
+  <div class="total-transactions">
+    <h4><%= @category.name %> Total: </h4>
+    <strong><%= @expenses.sum(:amount) %></strong>
+  </div>
+  <ul class="categories">
+    <% @expenses.each do |expense| %>
         <li class="transactions-item">
           <div class="icon-box">
-            <%= image_tag @category.icon if @category.icon.attached? %>
+            <img src="<%= @category.icon %>"/>
           </div>
           <div class="transaction-desc-box">
             <div class="transaction-name-box">
               <p><%= expense.name %></p>
               <strong><%= expense.amount %></strong>
-            </div>
-            <div class="creation-box">
+              </div>
+              <div class="creation-box">
               <p><%= DateTime.parse(expense.created_at.to_s).strftime("%d %b %Y") %></p>
-            </div>
+              </div>
           </div>
         </li>
       <% end %>
     </ul>
   </div>
-  <%= link_to 'New transaction', new_category_path, class: 'btn' %>
+  <%= link_to 'New transaction', new_category_expense_path(@category), class: 'btn' %>
+</section>
