@@ -1,14 +1,6 @@
 FactoryBot.define do
   factory :category do
     name { 'MyCategory' }
-    user
-
-    after(:build) do |category|
-      category.icon.attach(
-        io: File.open(Rails.root.join('spec', 'assets', 'test.png')),
-        filename: 'test.png',
-        content_type: 'image/png'
-      )
-    end
+    icon { 'https://cdn.pixabay.com/photo/2013/07/13/01/22/vegetables-155616_640.png' }
   end
 end

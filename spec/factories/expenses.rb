@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :expense do
     association :user
     name { 'MYexpenese' }
-    amount { 11 }
+    amount { 100 }
 
     transient do
       categories_count { 3 }
