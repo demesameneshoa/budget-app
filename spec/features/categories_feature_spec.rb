@@ -8,7 +8,7 @@ RSpec.feature 'Categories', type: :feature do
   end
 
   scenario 'User sees categories index' do
-    create_list(:category, 3, user: user)
+    create_list(:category, 3, user:)
     visit categories_path
     expect(page).to have_text('MyCategory')
   end
