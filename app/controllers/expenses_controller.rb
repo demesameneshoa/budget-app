@@ -16,25 +16,22 @@ class ExpensesController < ApplicationController
   # GET /expenses/new
   def new
     @expense = Expense.new
+    @categories = current_user.categories.all
+  end
+
+  def create
+    @expense = current_user.expenses.build(expense_params)
+    if @expense.save
+      @expense.category_ids = params[:expense][:category_ids] if params[:expense][:category_ids].present?
+
+      redirect_to category_expenses_path
+    else
+      render html: @expense.errors.full_messages
+    end
   end
 
   # GET /expenses/1/edit
   def edit; end
-
-  # POST /expenses or /expenses.json
-  def create
-    @expense = Expense.new(expense_params)
-
-    respond_to do |format|
-      if @expense.save
-        format.html { redirect_to expense_url(@expense), notice: 'Expense was successfully created.' }
-        format.json { render :show, status: :created, location: @expense }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @expense.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 
   # PATCH/PUT /expenses/1 or /expenses/1.json
   def update
@@ -68,6 +65,6 @@ class ExpensesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def expense_params
-    params.require(:expense).permit(:name, :amount, :user_id)
+    params.require(:expense).permit(:name, :amount, :user_id, category_ids: [])
   end
 end

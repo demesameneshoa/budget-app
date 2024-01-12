@@ -48,6 +48,10 @@
   font-size: 24px;
 }
 
+.category-total {
+  font-family: 'ProximaBold', sans-serif;
+  font-size: 24px;
+}
 .category-name a {
   color: #949494;
   text-decoration: none;
@@ -80,5 +84,10 @@
   border-radius: 4px;
   padding: 8px;
   width: 100%;
+  cursor: pointer;
+}
+
+.large-trash-icon {
+  font-size: 1.8em;
   cursor: pointer;
 }
