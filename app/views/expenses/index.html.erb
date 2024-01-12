@@ -25,10 +25,10 @@
             <div class="transaction-name-box">
               <p><%= expense.name %></p>
               <strong><%= expense.amount %></strong>
-            </div>
-            <div class="creation-box">
+              </div>
+              <div class="creation-box">
               <p><%= DateTime.parse(expense.created_at.to_s).strftime("%d %b %Y") %></p>
-            </div>
+              </div>
           </div>
         </li>
       <% end %>
