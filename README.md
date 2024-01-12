@@ -84,13 +84,13 @@ run ```rspec spec```
 
 ### Deployment
 
-This project is deployed on Render. You can visit it [here](https://mybudget-c56c.onrender.com)
+This project is deployed on Render. You can visit it [here](https://budget-app-pz7b.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 Video presentation of the project:
   
-  [Here](https://drive.google.com/file/d/1TTkDoh7j41L4ESo7JjatNWCv4Yt7KA0k/view?usp=sharing)
+  [Here](https://www.loom.com/share/2fdeb817c29a45f7aea1cf96413b8d6c?sid=f9437974-5b25-49ef-8c38-eb0498b248dc)
 
 <!-- AUTHORS -->
 
